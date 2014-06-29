@@ -2,6 +2,6 @@
 
 require 'targit'
 
-x = Targit.new(repo: 'dock0/arch')
+x = Targit.new('/Users/akerl/Code/Dock0/arch/root.tar.xz', repo: 'dock0/arch', tag: 'v0.0.fish', create: true)
+x.upload!
 
-p x.release

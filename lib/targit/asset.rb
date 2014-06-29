@@ -13,12 +13,14 @@ module Targit
       @release = _release params
       @asset = asset
       @name = params[:name]
+      @content_type = params[:content_type]
     end
 
     def upload!
-      url = @release[:upload_url]
+      url = @release[:url]
       options = {}
       options[:name] = @name if @name
+      options[:content_type] = @content_type
       @client.upload_asset url, @asset, options
     end
 
@@ -44,7 +46,7 @@ module Targit
     def _release(params)
       params = params.dup
       params[:client] = @client
-      Targit::Release.new params
+      Targit::Release.new(params).data
     end
   end
 end

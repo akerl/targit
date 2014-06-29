@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.date        = Time.now.strftime("%Y-%m-%d")
 
-  s.summary     = ''
-  s.description = ""
+  s.summary     = 'Tool for adding GitHub release assets'
+  s.description = "Manages GitHub release assets for pushing binaries and other large files"
   s.authors     = ['Les Aker']
   s.email       = 'me@lesaker.org'
   s.homepage    = 'https://github.com/akerl/targit'

@@ -8,7 +8,7 @@ targit
 [![Build Status](https://img.shields.io/travis/akerl/targit.svg)](https://travis-ci.org/akerl/targit)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
-SHORT_DESCRIPTION
+Manages GitHub release assets for pushing binaries and other large files
 
 ## Usage
 

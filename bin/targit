@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'targit'
+
+x = Targit.new(repo: 'dock0/arch')
+
+p x.release

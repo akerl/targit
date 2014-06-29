@@ -4,8 +4,8 @@ require 'targit'
 require 'mercenary'
 
 Mercenary.program(:targit) do |p|
-  p.version = Targit::VERSION
-  p.description = 'Tool for adding GitHub release assets'
+  p.version Targit::VERSION
+  p.description 'Tool for adding GitHub release assets'
   p.syntax 'targit [options] USER/REPO TAG /path/to/file'
 
   # rubocop:disable Style/LineLength

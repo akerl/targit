@@ -5,17 +5,27 @@ module Targit
   ##
   # Define asset object for a release
   class Asset
-    attr_reader :config, :client, :release
+    attr_reader :release, :asset
 
-    def initialize(params = {})
+    def initialize(asset, params = {})
       @config = _config params
-      @client = _client
+      @client = _client params
       @release = _release params
+      @asset = asset
+      @name = params[:name]
+    end
+
+    def upload!
+      url = @release[:upload_url]
+      options = {}
+      options[:name] = @name if @name
+      @client.upload_asset url, @asset, options
     end
 
     private
 
     def _config(params)
+      params[:authfile] ||= Octoauth::DEFAULT_FILE
       Octoauth.new(
         note: 'targit',
         file: params[:authfile],
@@ -32,7 +42,9 @@ module Targit
     end
 
     def _release(params)
-      @client.releases(params[:repo])
+      params = params.dup
+      params[:client] = @client
+      Targit::Release.new params
     end
   end
 end

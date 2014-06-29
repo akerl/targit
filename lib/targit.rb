@@ -12,3 +12,4 @@ module Targit
 end
 
 require 'targit/asset'
+require 'targit/release'

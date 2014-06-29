@@ -7,12 +7,12 @@ module Targit
   class Asset
     attr_reader :release, :asset, :name, :github_data
 
-    def initialize(asset, params = {})
+    def initialize(asset, repo, tag, params = {})
       @options = params
       @config = _config
       @client = _client
-      @release = _release
-      @upload_options = _options
+      @release = _release repo, tag
+      @upload_options = _upload_options
       @asset = asset
       @name = @upload_options[:name] || File.basename(@asset)
     end
@@ -20,7 +20,7 @@ module Targit
     def upload!
       delete! if @options[:force]
       fail('Release asset already exists') if already_exists?
-      @client.upload_asset @release[:url], @asset, @options
+      @client.upload_asset @release[:url], @asset, @upload_options
     end
 
     def already_exists?
@@ -58,11 +58,11 @@ module Targit
       )
     end
 
-    def _release
-      Targit::Release.new(@client, @options).data
+    def _release(repo, tag)
+      Targit::Release.new(@client, repo, tag, @options).data
     end
 
-    def _options
+    def _upload_options
       [:name, :content_type].each_with_object({}) do |option, hash|
         hash[option] = @options[option] if @options[option]
       end

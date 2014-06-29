@@ -4,24 +4,33 @@ module Targit
   class Release
     attr_reader :data
 
-    def initialize(client, params = {})
+    def initialize(client, repo, tag, params = {})
       @client = client
-      @data = find params
-      create(params) if @data.nil? && params[:create]
+      @options = params
+      @repo = repo
+      @tag = tag
+      @create_options = _create_options
+      @data = find
+      create(params) if @data.nil? && @options[:create]
     end
 
     private
 
-    def find(params)
-      @client.releases(params[:repo]).find do |x|
-        x[:tag_name] == params[:tag]
+    def find
+      @client.releases(@repo).find do |x|
+        x[:tag_name] == @tag
       end
     end
 
     def create(params)
-      @client.create_release(params[:repo], params[:tag])
-      params[:create] = false
-      find params
+      @client.create_release(@orepo, @tag)
+      @data = find
+    end
+
+    def _create_options
+      [:prerelease, :target_commitish].each_with_object({}) do |option, hash|
+        hash[option] = @options[option] if @options[option]
+      end
     end
   end
 end

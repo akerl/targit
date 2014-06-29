@@ -1,7 +1,28 @@
 #!/usr/bin/env ruby
 
 require 'targit'
+require 'mercenary'
 
-x = Targit.new('/Users/akerl/Code/Dock0/arch/root.tar.xz', repo: 'dock0/arch', tag: 'v0.0.fish', create: true, force: true)
-x.upload!
+Mercenary.program(:targit) do |p|
+  p.version = Targit::VERSION
+  p.description = 'Tool for adding GitHub release assets'
+  p.syntax 'targit [options] USER/REPO TAG /path/to/file'
 
+  # rubocop:disable Style/LineLength
+  p.option :force, '-f', '--force', 'Replace the asset if it already exists'
+  p.option :create, '-c', '--create', 'Create release if it does not exist'
+  p.option :prerelease, '-p', '--prerelease', 'With -c, create as a dev release'
+  p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth file for GitHub credentials'
+  # rubocop:enable Style/LineLength
+
+  p.action do |args, options|
+    repo, tag, file = args
+    if repo && tag && file
+      puts "Attempting to upload #{file} on #{tag} of #{repo}"
+      asset = Targit.new(file, repo, tag, options).upload!
+      puts "Successfully created asset! #{asset.github_data[:url]}"
+    else
+      puts p
+    end
+  end
+end

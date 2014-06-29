@@ -11,7 +11,8 @@ module Targit
       @tag = tag
       @create_options = _create_options
       @data = find
-      create(params) if @data.nil? && @options[:create]
+      create if @data.nil? && @options[:create]
+      fail('No release found') if @data.nil?
     end
 
     private

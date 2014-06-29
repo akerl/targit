@@ -20,7 +20,7 @@ module Targit
     def upload!
       delete! if @options[:force]
       fail('Release asset already exists') if already_exists?
-      asset = @client.upload_asset @release[:url], @asset, @upload_options
+      asset = @client.upload_asset @release.data[:url], @asset, @upload_options
       @client.release_asset asset[:url]
     end
 
@@ -35,7 +35,7 @@ module Targit
     end
 
     def github_data
-      @client.release_assets(@release[:url]).find { |x| x[:name] == @name }
+      @client.release_assets(@release.data[:url]).find { |x| x[:name] == @name }
     end
 
     def url
@@ -65,7 +65,7 @@ module Targit
     end
 
     def _release(repo, tag)
-      Targit::Release.new(@client, repo, tag, @options).data
+      Targit::Release.new(@client, repo, tag, @options)
     end
 
     def _upload_options

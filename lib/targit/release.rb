@@ -22,8 +22,8 @@ module Targit
       end
     end
 
-    def create(params)
-      @client.create_release(@orepo, @tag)
+    def create
+      @client.create_release(@repo, @tag)
       @data = find
     end
 

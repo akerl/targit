@@ -16,6 +16,10 @@ Manages GitHub release assets for pushing binaries and other large files
 
     gem install targit
 
+## Contributors
+
+* [Jon Chen](https://github.com/fly) for suggesting release assets for storing large files, and for coming up with the workflow that this gem is built to streamline.
+
 ## License
 
 targit is released under the MIT License. See the bundled LICENSE file for details.

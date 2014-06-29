@@ -1,6 +1,9 @@
+$:.unshift File.expand_path('../lib/', __FILE__)
+require 'targit/version'
+
 Gem::Specification.new do |s|
   s.name        = 'targit'
-  s.version     = '0.0.1'
+  s.version     = Targit::VERSION
   s.date        = Time.now.strftime("%Y-%m-%d")
 
   s.summary     = 'Tool for adding GitHub release assets'
@@ -16,6 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'octokit', '~> 3.2.0'
   s.add_dependency 'octoauth', '~> 0.0.6'
+  s.add_dependency 'mercenary', '~> 0.3.3'
 
   s.add_development_dependency 'rubocop', '~> 0.24.0'
   s.add_development_dependency 'rake', '~> 10.3.2'

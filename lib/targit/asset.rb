@@ -20,7 +20,8 @@ module Targit
     def upload!
       delete! if @options[:force]
       fail('Release asset already exists') if already_exists?
-      @client.upload_asset @release[:url], @asset, @upload_options
+      asset = @client.upload_asset @release[:url], @asset, @upload_options
+      @client.release_asset asset[:url]
     end
 
     def already_exists?
@@ -35,6 +36,11 @@ module Targit
 
     def github_data
       @client.release_assets(@release[:url]).find { |x| x[:name] == @name }
+    end
+
+    def url
+      'https://github.com/' \
+        "#{@release.repo}/releases/download/#{@release.tag}/#{@name}"
     end
 
     private

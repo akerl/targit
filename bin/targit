@@ -19,8 +19,9 @@ Mercenary.program(:targit) do |p|
     repo, tag, file = args
     if repo && tag && file
       puts "Attempting to upload #{file} on #{tag} of #{repo}"
-      asset = Targit.new(file, repo, tag, options).upload!
-      puts "Successfully created asset! #{asset.github_data[:url]}"
+      asset = Targit.new(file, repo, tag, options)
+      asset.upload!
+      puts "Successfully created asset! #{asset.url}"
     else
       puts p
     end

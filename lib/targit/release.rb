@@ -2,7 +2,7 @@ module Targit
   ##
   # GitHub Release object
   class Release
-    attr_reader :data
+    attr_reader :data, :repo, :tag
 
     def initialize(client, repo, tag, params = {})
       @client = client

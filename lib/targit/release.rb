@@ -4,8 +4,8 @@ module Targit
   class Release
     attr_reader :data
 
-    def initialize(params = {})
-      @client = params.delete(:client)
+    def initialize(client, params = {})
+      @client = client
       @data = find params
       create(params) if @data.nil? && params[:create]
     end

@@ -1,5 +1,6 @@
 require 'octokit'
 require 'octoauth'
+require 'mime-types'
 
 module Targit
   ##
@@ -69,8 +70,16 @@ module Targit
     end
 
     def _upload_options
-      [:name, :content_type].each_with_object({}) do |option, hash|
+      options = [:name, :content_type].each_with_object({}) do |option, hash|
         hash[option] = @options[option] if @options[option]
+      end
+      options[:content_type] ||= guess_type
+      options
+    end
+
+    def guess_type
+      if mime_type = MIME::Types.type_for(@asset).first
+        mime_type.content_type
       end
     end
   end

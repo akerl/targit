@@ -78,9 +78,8 @@ module Targit
     end
 
     def guess_type
-      if mime_type = MIME::Types.type_for(@asset).first
-        mime_type.content_type
-      end
+      mime_type = MIME::Types.type_for(@asset).first
+      mime_type ? mime_type.content_type : nil
     end
   end
 end

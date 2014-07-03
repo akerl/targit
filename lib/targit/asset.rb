@@ -79,7 +79,7 @@ module Targit
 
     def guess_type
       mime_type = MIME::Types.type_for(@asset).first
-      mime_type ? mime_type.content_type : nil
+      mime_type ? mime_type.content_type : 'application/octet-stream'
     end
   end
 end

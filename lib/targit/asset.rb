@@ -40,8 +40,7 @@ module Targit
     end
 
     def url
-      'https://github.com/' \
-        "#{@release.repo}/releases/download/#{@release.tag}/#{@name}"
+      github_data[:browser_download_url] || fail('Asset URL not found')
     end
 
     private

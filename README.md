@@ -12,6 +12,28 @@ Manages GitHub release assets for pushing binaries and other large files
 
 ## Usage
 
+To upload a file as a release asset:
+
+```
+targit USER/REPO TAG /path/to/file
+```
+
+That will add the given file as a release asset for "TAG" on the given GitHub repo. If you haven't already stored GitHub credentials, it will prompt you for them.
+
+To create a release that doesn't already exist, add `-c`:
+
+```
+targit -c dock0/arch v0.1.75 ./new_tarball.tar.gz
+```
+
+Adding `-f` will replace an existing release/asset, if they exist:
+
+```
+targit -f -c dock0/arch v0.1.75 ./newer_tarball.tar.gz
+```
+
+The release can be created as a prerelease via -p. Using `-a` lets you use an alternate GitHub credential file, other than the default of `~/.octoauth.yml`.
+
 ## Installation
 
     gem install targit

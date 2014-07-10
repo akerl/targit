@@ -32,7 +32,11 @@ Adding `-f` will replace an existing release/asset, if they exist:
 targit -f -c dock0/arch v0.1.75 ./newer_tarball.tar.gz
 ```
 
-The release can be created as a prerelease via -p. Using `-a` lets you use an alternate GitHub credential file, other than the default of `~/.octoauth.yml`.
+Use `-n NAME` to set the name for the asset (it defaults to the file's name).
+
+The release can be created as a prerelease via -p.
+
+Using `-a` lets you use an alternate GitHub credential file, other than the default of `~/.octoauth.yml`.
 
 ## Installation
 

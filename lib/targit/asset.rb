@@ -15,7 +15,7 @@ module Targit
       @release = _release repo, tag
       @upload_options = _upload_options
       @asset = asset
-      @name = @upload_options[:name] || File.basename(@asset)
+      @name = @options[:name] || File.basename(@asset)
     end
 
     def upload!

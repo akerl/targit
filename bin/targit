@@ -16,9 +16,9 @@ Mercenary.program(:targit) do |p|
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'
   # rubocop:enable Style/LineLength
 
-  p.action do |args, options|
-    repo, tag, file = args
-    if repo && tag && file
+  p.action do |_, options|
+    repo, tag = ARGV.shift 2
+    if repo && tag && ! ARGV.empty?
       puts "Attempting to upload #{file} on #{tag} of #{repo}"
       asset = Targit.new(file, repo, tag, options)
       asset.upload!

@@ -33,7 +33,7 @@ Mercenary.program(:targit) do |p|
         upload file, repo, tag, options
       end
     elsif !STDIN.tty?
-      fail("Name required if file is passed via STDIN") unless options[:name]
+      fail('Name required if file is passed via STDIN') unless options[:name]
       upload STDIN, repo, tag, options
     else
       puts p

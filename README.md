@@ -32,7 +32,17 @@ Adding `-f` will replace an existing release/asset, if they exist:
 targit -f -c dock0/arch v0.1.75 ./newer_tarball.tar.gz
 ```
 
-Use `-n NAME` to set the name for the asset (it defaults to the file's name).
+Use `-n NAME` to set the name for the asset (it defaults to the file's name):
+
+```
+targit -n special.tar.gz -f -c dock0/arch v0.1.76 ./custom_tarball.tar.gz
+```
+
+Content can also be provided via stdin:
+
+```
+echo "secrit data" | targit -f -c -n foobar dock0/arch v0.0.test
+```
 
 The release can be created as a prerelease via -p.
 

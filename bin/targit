@@ -3,6 +3,12 @@
 require 'targit'
 require 'mercenary'
 
+def upload(file, repo, tag, options)
+  asset = Targit.new(file, repo, tag, options)
+  asset.upload!
+  puts "Successfully created asset! #{asset.url}"
+end
+
 Mercenary.program(:targit) do |p|
   p.version Targit::VERSION
   p.description 'Tool for adding GitHub release assets'
@@ -18,11 +24,17 @@ Mercenary.program(:targit) do |p|
 
   p.action do |_, options|
     repo, tag = ARGV.shift 2
-    if repo && tag && ! ARGV.empty?
-      puts "Attempting to upload #{file} on #{tag} of #{repo}"
-      asset = Targit.new(file, repo, tag, options)
-      asset.upload!
-      puts "Successfully created asset! #{asset.url}"
+    if !repo || !tag
+      puts p
+    elsif !ARGV.empty?
+      ARGV.each { |file| fail("#{file} not found") unless File.exist? file }
+      ARGV.each do |file|
+        puts "Adding #{file} on #{tag} of #{repo}"
+        upload file, repo, tag, options
+      end
+    elsif !STDIN.tty?
+      fail("Name required if file is passed via STDIN") unless options[:name]
+      upload STDIN, repo, tag, options
     else
       puts p
     end

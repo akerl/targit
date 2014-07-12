@@ -7,7 +7,8 @@ describe Targit do
         asset = Targit.new(
           'spec/examples/alpha',
           'akerl/targit',
-          'testing'
+          'testing',
+          authfile: 'spec/.creds'
         )
         expect(asset).to be_an_instance_of Targit::Asset
       end

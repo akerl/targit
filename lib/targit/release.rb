@@ -19,7 +19,6 @@ module Targit
 
     def find
       @client.releases(@repo).find do |x|
-        p x
         x[:tag_name] == @tag
       end
     end

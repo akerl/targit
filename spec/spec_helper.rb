@@ -10,7 +10,7 @@ require 'rspec'
 require 'targit'
 
 unless File.exist? 'spec/.creds'
-  File.open('spec/.creds') do |fh|
+  File.open('spec/.creds', 'w') do |fh|
     fh << "---\ntargit: sekritkey\n"
   end
 end

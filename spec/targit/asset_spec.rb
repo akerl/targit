@@ -23,6 +23,7 @@ describe Targit do
         )
       end
     end
+
     it 'exposes the release object' do
       expect(asset.release).to be_an_instance_of Targit::Release
     end
@@ -32,6 +33,22 @@ describe Targit do
     it 'expostes the asset name' do
       expect(asset.name).to eql 'alpha'
       expect(io_asset.name).to eql 'alpha'
+    end
+
+    describe '#upload!' do
+      it 'uploads a release asset' do
+        VCR.use_cassette('create_new_release') do
+          asset = Targit.new(
+            'spec/examples/beta',
+            'akerl/targit',
+            'testing',
+            authfile: 'spec/.creds'
+          )
+          expect { asset.url }.to raise_error RuntimeError, /URL not found/
+          asset.upload!
+          expect(asset.url).to eql 'https://github.com/akerl/targit/releases/download/testing/beta'
+        end
+      end
     end
   end
 end

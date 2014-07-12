@@ -9,6 +9,12 @@ end
 require 'rspec'
 require 'targit'
 
+unless File.exist? 'spec/.creds'
+  File.open('spec/.creds') do |fh|
+    fh << "---\ntargit: sekritkey\n"
+  end
+end
+
 require 'vcr'
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'

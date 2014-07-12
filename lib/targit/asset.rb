@@ -40,7 +40,8 @@ module Targit
     end
 
     def url
-      github_data[:browser_download_url] || fail('Asset URL not found')
+      data = github_data
+      data ? data[:browser_download_url] : fail('Asset URL not found')
     end
 
     private

@@ -3,4 +3,4 @@ coverage/
 .coveralls.yml
 .bundle
 Gemfile.lock
-.github
+spec/.creds

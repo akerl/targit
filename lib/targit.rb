@@ -12,5 +12,6 @@ module Targit
 end
 
 require 'targit/version'
+require 'targit/client'
 require 'targit/asset'
 require 'targit/release'

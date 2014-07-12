@@ -6,12 +6,14 @@ module Targit
   ##
   # Define asset object for a release
   class Asset
+    include Targit::Client
+
     attr_reader :release, :asset, :name, :github_data
 
     def initialize(asset, repo, tag, params = {})
       @options = params
-      @config = _config
-      @client = _client
+      @options[:client] ||= _client
+      @client = @options[:client]
       @release = _release repo, tag
       @upload_options = _upload_options
       @asset = asset
@@ -46,27 +48,8 @@ module Targit
 
     private
 
-    def _config
-      @options[:authfile] ||= Octoauth::DEFAULT_FILE
-      @options[:autosave] ||= true
-      Octoauth.new(
-        note: 'targit',
-        file: @options[:authfile],
-        autosave: @options[:autosave]
-      )
-    end
-
-    def _client
-      Octokit::Client.new(
-        access_token: @config.token,
-        api_endpoint: @options[:api_endpoint],
-        web_endpoint: @options[:api_endpoint],
-        auto_paginate: true
-      )
-    end
-
     def _release(repo, tag)
-      Targit::Release.new(@client, repo, tag, @options)
+      Targit::Release.new(repo, tag, @options)
     end
 
     def _upload_options

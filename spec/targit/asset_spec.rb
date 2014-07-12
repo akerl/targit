@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Targit do
   describe Targit::Asset do
     let(:asset) do
-      VCR.use_cassette('current_releases') do
+      VCR.use_cassette('current_asset') do
         Targit.new(
           'spec/examples/alpha',
           'akerl/targit',
@@ -13,13 +13,14 @@ describe Targit do
       end
     end
     let(:io_asset) do
-      VCR.use_cassette('current_releases') do
+      VCR.use_cassette('current_io_asset') do
         fh = File.open('spec/examples/alpha')
         Targit.new(
           fh,
           'akerl/targit',
           'testing',
-          authfile: 'spec/.creds'
+          authfile: 'spec/.creds',
+          create: true
         )
       end
     end
@@ -30,7 +31,7 @@ describe Targit do
     it 'exposes the asset attribute' do
       expect(asset.asset).to eql 'spec/examples/alpha'
     end
-    it 'expostes the asset name' do
+    it 'exposes the asset name' do
       expect(asset.name).to eql 'alpha'
       expect(io_asset.name).to eql 'alpha'
     end
@@ -65,7 +66,7 @@ describe Targit do
           authfile: 'spec/.creds',
           create: true
         )
-        expect(asset.url).to eql 'https://github.com/akerl/targit/releases/download/more_testing/beta'
+        expect(asset.release).to be_an_instance_of Targit::Release
       end
     end
 
@@ -157,10 +158,12 @@ describe Targit do
           asset = Targit.new(
             'spec/examples/beta',
             'akerl/targit',
-            'testing',
-            authfile: 'spec/.creds'
+            'meta_testing',
+            authfile: 'spec/.creds',
+            create: true
           )
-          expect(asset.github_data[:tag_name]).to eql 'testing'
+          asset.upload!
+          expect(asset.github_data[:name]).to eql 'beta'
         end
       end
       it 'returns nil if the asset is not on GitHub' do
@@ -183,8 +186,10 @@ describe Targit do
             'spec/examples/beta',
             'akerl/targit',
             'testing',
-            authfile: 'spec/.creds'
+            authfile: 'spec/.creds',
+            force: true
           )
+          asset.upload!
           expect(asset.url).to eql 'https://github.com/akerl/targit/releases/download/testing/beta'
         end
       end
@@ -194,8 +199,10 @@ describe Targit do
             'spec/examples/beta',
             'akerl/targit',
             'testing',
-            authfile: 'spec/.creds'
+            authfile: 'spec/.creds',
+            create: true
           )
+          asset.delete!
           expect { asset.url }.to raise_error RuntimeError, /URL not found/
         end
       end

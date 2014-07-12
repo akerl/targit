@@ -2,13 +2,14 @@ module Targit
   ##
   # GitHub Release object
   class Release
+    include Targit::Client
+
     attr_reader :data, :repo, :tag
 
-    def initialize(client, repo, tag, params = {})
-      @client = client
-      @options = params
-      @repo = repo
-      @tag = tag
+    def initialize(repo, tag, params = {})
+      @repo, @tag, @options = repo, tag, params
+      @options[:client] ||= _client
+      @client = @options[:client]
       @create_options = _create_options
       @data = find
       create if @data.nil? && @options[:create]

@@ -8,7 +8,8 @@ describe Targit do
           'spec/examples/alpha',
           'akerl/targit',
           'testing',
-          authfile: 'spec/.creds'
+          authfile: 'spec/.creds',
+          create: true
         )
       end
     end
@@ -90,7 +91,7 @@ describe Targit do
             'spec/examples/beta',
             'akerl/targit',
             'testing',
-            authfile: 'spec/.creds',
+            authfile: 'spec/.creds'
           )
           expect { asset.upload! }.to raise_error RuntimeError, /already exists/
         end

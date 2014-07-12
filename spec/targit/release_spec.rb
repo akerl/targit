@@ -15,7 +15,7 @@ describe Targit do
       expect(basic_release.repo).to eql 'akerl/targit'
     end
     it 'exposes the tag name' do
-      expect(asset.tag).to eql 'testing'
+      expect(basic_release.tag).to eql 'testing'
     end
 
     it 'does not create a new release by default' do

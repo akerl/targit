@@ -36,5 +36,17 @@ describe Targit do
         expect(release.repo).to eql 'akerl/targit'
       end
     end
+
+    it 'uses the provided release name if given' do
+      VCR.use_cassette('create_named_release') do
+        release = Targit::Release.new(
+          'akerl/targit',
+          'new_release',
+          create: 'special',
+          authfile: 'spec/.creds'
+        )
+        expect(release.data[:name]).to eql 'special'
+      end
+    end
   end
 end

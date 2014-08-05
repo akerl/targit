@@ -25,12 +25,14 @@ module Targit
     end
 
     def create
-      @client.create_release(@repo, @tag)
+      @client.create_release(@repo, @tag, @create_options)
       @data = find
     end
 
     def _create_options
-      [:prerelease, :target_commitish].each_with_object({}) do |option, hash|
+      opts = {}
+      opts[:name] = @options[:create] if @options[:create].is_a? String
+      [:prerelease, :target_commitish].each_with_object(opts) do |option, hash|
         hash[option] = @options[option] if @options[option]
       end
     end

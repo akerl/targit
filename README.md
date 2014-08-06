@@ -29,7 +29,7 @@ targit -c dock0/arch v0.1.75 ./new_tarball.tar.gz
 Specify a name for the release, if desired:
 
 ```
-targid -c="cool release" dock0/arch v0.1.75 ./new_tarball.tar.gz
+targit --create="cool release" dock0/arch v0.1.75 ./new_tarball.tar.gz
 ```
 
 Adding `-f` will replace an existing release/asset, if they exist:

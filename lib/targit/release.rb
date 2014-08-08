@@ -31,7 +31,7 @@ module Targit
 
     def _create_options
       opts = {}
-      opts[:name] = @options[:create] if @options[:create].is_a? String
+      opts[:name] = @options[:create] if @options[:create].to_s.size
       [:prerelease, :target_commitish].each_with_object(opts) do |option, hash|
         hash[option] = @options[option] if @options[option]
       end

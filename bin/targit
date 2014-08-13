@@ -16,7 +16,8 @@ Mercenary.program(:targit) do |p|
 
   # rubocop:disable Style/LineLength
   p.option :force, '-f', '--force', 'Replace the asset if it already exists'
-  p.option :create, '-c', '--create [NAME]', 'Create release if it does not exist'
+  p.option :create, '-c', '--create', 'Create release if it does not exist'
+  p.option :release_name, '-r NAME', '--release NAME', 'Set the release name'
   p.option :prerelease, '-p', '--prerelease', 'With -c, create as a dev release'
   p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth file for GitHub credentials'
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'

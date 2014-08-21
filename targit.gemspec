@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 10.3.2'
   s.add_development_dependency 'coveralls', '~> 0.7.0'
   s.add_development_dependency 'rspec', '~> 3.0.0'
-  s.add_development_dependency 'fuubar', '~> 2.0.0.rc1'
+  s.add_development_dependency 'fuubar', '~> 2.0.0'
   s.add_development_dependency 'webmock', '~> 1.18.0'
   s.add_development_dependency 'vcr', '~> 2.9.2'
 end

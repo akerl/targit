@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'octokit', '~> 3.3.1'
   s.add_dependency 'octoauth', '~> 0.0.8'
-  s.add_dependency 'mercenary', '~> 0.3.3'
+  s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 2.3'
 
   s.add_development_dependency 'rubocop', '~> 0.25.0'

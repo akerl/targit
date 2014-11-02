@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
   s.executables = ['targit']
 
-  s.add_dependency 'octokit', '~> 3.4.0'
+  s.add_dependency 'octokit', '~> 3.5.2'
   s.add_dependency 'octoauth', '~> 0.0.8'
   s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 2.3'
@@ -27,6 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls', '~> 0.7.1'
   s.add_development_dependency 'rspec', '~> 3.1.0'
   s.add_development_dependency 'fuubar', '~> 2.0.0'
-  s.add_development_dependency 'webmock', '~> 1.19.0'
+  s.add_development_dependency 'webmock', '~> 1.20.2'
   s.add_development_dependency 'vcr', '~> 2.9.2'
 end

@@ -8,9 +8,9 @@ module Targit
     private
 
     def _client
-      file = @options[:authfile] || Octoauth::DEFAULT_FILE
+      files = @options[:authfile].split(',') || [:default]
       autosave = @options[:autosave] || true
-      auth = Octoauth.new note: 'targit', file: file, autosave: autosave
+      auth = Octoauth.new note: 'targit', files: files, autosave: autosave
       Octokit::Client.new(
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],

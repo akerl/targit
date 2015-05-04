@@ -19,7 +19,7 @@ Mercenary.program(:targit) do |p|
   p.option :create, '-c', '--create', 'Create release if it does not exist'
   p.option :release_name, '-r NAME', '--release NAME', 'Set the release name'
   p.option :prerelease, '-p', '--prerelease', 'With -c, create as a dev release'
-  p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth file for GitHub credentials'
+  p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth files for GitHub credentials (comma-delimited)'
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'
   # rubocop:enable Style/LineLength
 

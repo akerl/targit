@@ -12,8 +12,7 @@ module Targit
 
     def initialize(asset, repo, tag, params = {})
       @options = params
-      @options[:client] ||= _client
-      @client = @options[:client]
+      @options[:client] ||= client
       @release = _release repo, tag
       @upload_options = _upload_options
       @asset = asset
@@ -23,8 +22,8 @@ module Targit
     def upload!
       delete! if @options[:force]
       fail('Release asset already exists') if already_exists?
-      asset = @client.upload_asset @release.data[:url], @asset, @upload_options
-      @client.release_asset asset[:url]
+      asset = client.upload_asset @release.data[:url], @asset, @upload_options
+      client.release_asset asset[:url]
     end
 
     def already_exists?
@@ -34,11 +33,11 @@ module Targit
     def delete!
       asset = github_data
       return unless asset
-      @client.delete_release_asset asset[:url]
+      client.delete_release_asset asset[:url]
     end
 
     def github_data
-      @client.release_assets(@release.data[:url]).find { |x| x[:name] == @name }
+      client.release_assets(@release.data[:url]).find { |x| x[:name] == @name }
     end
 
     def url

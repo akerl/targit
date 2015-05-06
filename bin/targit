@@ -14,14 +14,14 @@ Mercenary.program(:targit) do |p|
   p.description 'Tool for adding GitHub release assets'
   p.syntax 'targit [options] USER/REPO TAG /path/to/file'
 
-  # rubocop:disable Style/LineLength
+  # rubocop:disable Metrics/LineLength
   p.option :force, '-f', '--force', 'Replace the asset if it already exists'
   p.option :create, '-c', '--create', 'Create release if it does not exist'
   p.option :release_name, '-r NAME', '--release NAME', 'Set the release name'
   p.option :prerelease, '-p', '--prerelease', 'With -c, create as a dev release'
   p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth files for GitHub credentials (comma-delimited)'
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'
-  # rubocop:enable Style/LineLength
+  # rubocop:enable Metrics/LineLength
 
   p.action do |_, options|
     repo, tag = ARGV.shift 2

@@ -7,6 +7,10 @@ module Targit
   module Client
     private
 
+    def client
+      @client ||= _client
+    end
+
     def _client
       files = @options[:authfile].split(',') || [:default]
       autosave = @options[:autosave] || true

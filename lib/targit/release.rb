@@ -4,32 +4,32 @@ module Targit
   class Release
     include Targit::Client
 
-    attr_reader :data, :repo, :tag
+    attr_reader :repo, :tag
 
     def initialize(repo, tag, params = {})
-      @repo, @tag, @options = repo, tag, params
-      @options[:client] ||= _client
-      @client = @options[:client]
-      @create_options = _create_options
-      @data = find
-      create if @data.nil? && @options.include?(:create)
-      fail('No release found') if @data.nil?
+      @repo = repo
+      @tag = tag
+      @options = params
+      @options[:client] ||= client
+      create if @options.include?(:create) && data.nil?
+      fail('No release found') if data.nil?
+    end
+
+    def data
+      @data ||= _data
     end
 
     private
 
-    def find
-      @client.releases(@repo).find do |x|
-        x[:tag_name] == @tag
-      end
+    def _data
+      client.releases(@repo).find { |x| x[:tag_name] == @tag }
     end
 
     def create
-      @client.create_release(@repo, @tag, @create_options)
-      @data = find
+      client.create_release(@repo, @tag, create_options)
     end
 
-    def _create_options
+    def create_options
       opts = {}
       opts[:name] = @options[:release_name] if @options[:release_name]
       [:prerelease, :target_commitish].each_with_object(opts) do |option, hash|

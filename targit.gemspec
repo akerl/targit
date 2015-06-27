@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
   s.executables = ['targit']
 
-  s.add_dependency 'octokit', '~> 3.8.0'
+  s.add_dependency 'octokit', '~> 4.0.0'
   s.add_dependency 'octoauth', '~> 1.1.0'
   s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 2.3'

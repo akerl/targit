@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables = ['targit']
 
   s.add_dependency 'octokit', '~> 4.1.0'
-  s.add_dependency 'octoauth', '~> 1.2.0'
+  s.add_dependency 'octoauth', '~> 1.3.0'
   s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 2.3'
 

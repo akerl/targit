@@ -12,8 +12,7 @@ module Targit
     end
 
     def _client
-      autosave = @options[:autosave] || true
-      auth = Octoauth.new octoauth_options note: 'targit', files: authfiles, autosave: autosave
+      auth = Octoauth.new octoauth_options
       Octokit::Client.new(
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],

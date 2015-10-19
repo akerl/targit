@@ -12,15 +12,19 @@ module Targit
     end
 
     def _client
-      files = @options[:authfile].split(',') || [:default]
       autosave = @options[:autosave] || true
-      auth = Octoauth.new note: 'targit', files: files, autosave: autosave
+      auth = Octoauth.new note: 'targit', files: authfiles, autosave: autosave
       Octokit::Client.new(
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],
         web_endpoint: @options[:api_endpoint],
         auto_paginate: true
       )
+    end
+
+    def authfiles
+      return [:default] unless @options[:authfile]
+      @authfile ||= @options[:authfile].split(',')
     end
   end
 end

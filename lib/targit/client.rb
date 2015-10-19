@@ -13,13 +13,20 @@ module Targit
 
     def _client
       autosave = @options[:autosave] || true
-      auth = Octoauth.new note: 'targit', files: authfiles, autosave: autosave
+      auth = Octoauth.new octoauth_options note: 'targit', files: authfiles, autosave: autosave
       Octokit::Client.new(
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],
         web_endpoint: @options[:api_endpoint],
         auto_paginate: true
       )
+    end
+
+    def octoauth_options
+      autosave = @options[:autosave] || true
+      {
+        note: 'targit', files: authfiles, autosave: autosave, scopes: ['user']
+      }
     end
 
     def authfiles

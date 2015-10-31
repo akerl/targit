@@ -15,14 +15,15 @@ describe Targit do
     end
     let(:io_asset) do
       VCR.use_cassette('current_io_asset') do
-        fh = File.open('spec/examples/alpha')
-        Targit.new(
-          fh,
-          'akerl/targit',
-          'testing',
-          authfile: 'spec/.creds',
-          create: true
-        )
+        File.open('spec/examples/alpha') do |fh|
+          Targit.new(
+            fh,
+            'akerl/targit',
+            'testing',
+            authfile: 'spec/.creds',
+            create: true
+          )
+        end
       end
     end
 

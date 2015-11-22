@@ -2,6 +2,7 @@
 
 * [ENHANCEMENT] Upgrade to mime-types v3
 * [DEPRECATED] Rubies earlier than 2.x are no longer supported
+* [BUGFIX] Fix failed mime-type parsing
 
 # 1.1.0 / 2015-05-04
 

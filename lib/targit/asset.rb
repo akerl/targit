@@ -14,8 +14,8 @@ module Targit
       @options = params
       @options[:client] ||= client
       @release = _release repo, tag
-      @upload_options = _upload_options
       @asset = asset
+      @upload_options = _upload_options
       @name = @options[:name] || File.basename(@asset)
     end
 

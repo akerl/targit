@@ -22,9 +22,11 @@ module Targit
     end
 
     def octoauth_options
-      autosave = @options[:autosave] || true
       {
-        note: 'targit', files: authfiles, autosave: autosave, scopes: ['public_repo']
+        note: 'targit',
+        files: authfiles,
+        autosave: @options[:autosave] || true,
+        scopes: ['public_repo']
       }
     end
 

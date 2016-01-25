@@ -1,3 +1,7 @@
+# 2.0.1 / 2016-01-23
+
+* [BUGFIX] Update scopes for auth file
+
 # 2.0.0 / 2015-11-22
 
 * [ENHANCEMENT] Upgrade to mime-types v3

@@ -12,7 +12,7 @@ module Targit
       @options = params
       @options[:client] ||= client
       create if @options.include?(:create) && data.nil?
-      fail('No release found') if data.nil?
+      raise('No release found') if data.nil?
     end
 
     def data

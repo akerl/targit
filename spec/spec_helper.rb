@@ -9,6 +9,9 @@ end
 
 require 'rspec'
 require 'targit'
+require 'webmock'
+
+WebMock.enable!
 
 unless File.exist? 'spec/.creds'
   File.open('spec/.creds', 'w') do |fh|

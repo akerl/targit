@@ -3,7 +3,7 @@ targit
 
 [![Gem Version](https://img.shields.io/gem/v/targit.svg)](https://rubygems.org/gems/targit)
 [![Dependency Status](https://img.shields.io/gemnasium/akerl/targit.svg)](https://gemnasium.com/akerl/targit)
-[![Build Status](https://img.shields.io/circleci/project/akerl/targit.svg)](https://circleci.com/gh/akerl/targit)
+[![Build Status](https://img.shields.io/circleci/project/akerl/targit/master.svg)](https://circleci.com/gh/akerl/targit)
 [![Coverage Status](https://img.shields.io/codecov/c/github/akerl/targit.svg)](https://codecov.io/github/akerl/targit)
 [![Code Quality](https://img.shields.io/codacy/596c329739534caeb1df1f14a5381355.svg)](https://www.codacy.com/app/akerl/targit)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)

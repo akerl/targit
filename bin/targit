@@ -9,6 +9,7 @@ def upload(file, repo, tag, options)
   puts "Successfully created asset! #{asset.url}"
 end
 
+# rubocop:disable Metrics/BlockLength
 Mercenary.program(:targit) do |p|
   p.version Targit::VERSION
   p.description 'Tool for adding GitHub release assets'

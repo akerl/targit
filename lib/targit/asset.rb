@@ -52,7 +52,7 @@ module Targit
     end
 
     def _upload_options
-      options = [:name, :content_type].each_with_object({}) do |option, hash|
+      options = %i[name content_type].each_with_object({}) do |option, hash|
         hash[option] = @options[option] if @options[option]
       end
       options[:content_type] ||= guess_type

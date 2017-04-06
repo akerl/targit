@@ -32,7 +32,7 @@ module Targit
     def create_options
       opts = {}
       opts[:name] = @options[:release_name] if @options[:release_name]
-      [:prerelease, :target_commitish].each_with_object(opts) do |option, hash|
+      %i[prerelease target_commitish].each_with_object(opts) do |option, hash|
         hash[option] = @options[option] if @options[option]
       end
     end

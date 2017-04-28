@@ -1,3 +1,7 @@
+# 2.0.2 / 2017-04-27
+
+* [ENHANCEMENT] Update version w/ new dependency pins
+
 # 2.0.1 / 2016-01-23
 
 * [BUGFIX] Update scopes for auth file

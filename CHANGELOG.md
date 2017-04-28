@@ -1,3 +1,7 @@
+# 2.1.0 / 2017-04-27
+
+* [FEATURE] Support api_endpoint for octoauth tokens
+
 # 2.0.2 / 2017-04-27
 
 * [ENHANCEMENT] Update version w/ new dependency pins

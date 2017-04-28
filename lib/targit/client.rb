@@ -26,6 +26,7 @@ module Targit
         note: 'targit',
         files: authfiles,
         autosave: @options[:autosave] || true,
+        api_endpoint: @options[:api_endpoint],
         scopes: ['public_repo']
       }
     end

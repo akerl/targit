@@ -22,7 +22,7 @@ Mercenary.program(:targit) do |p|
   p.option :prerelease, '-p', '--prerelease', 'With -c, create as a dev release'
   p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth files for GitHub credentials (comma-delimited)'
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'
-  p.option :endpoint, '--endpoint URL', 'Use a custom URL for the GitHub API'
+  p.option :api_endpoint, '--endpoint URL', 'Use a custom URL for the GitHub API'
   # rubocop:enable Metrics/LineLength
 
   p.action do |_, options|

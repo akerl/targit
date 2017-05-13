@@ -1,3 +1,7 @@
+# 2.2.0 / 2017-05-12
+
+* [FEATURE] Support --endpoint in the CLI
+
 # 2.1.0 / 2017-04-27
 
 * [FEATURE] Support api_endpoint for octoauth tokens

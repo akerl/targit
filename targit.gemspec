@@ -1,13 +1,14 @@
-$:.unshift File.expand_path('../lib/', __FILE__)
+require 'English'
+$LOAD_PATH.unshift File.expand_path('../lib/', __FILE__)
 require 'targit/version'
 
 Gem::Specification.new do |s|
   s.name        = 'targit'
   s.version     = Targit::VERSION
-  s.date        = Time.now.strftime("%Y-%m-%d")
+  s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Tool for adding GitHub release assets'
-  s.description = "Manages GitHub release assets for pushing binaries and other large files"
+  s.description = 'Manages GitHub release assets for pushing binaries and other large files' # rubocop:disable Metrics/LineLength
   s.authors     = ['Les Aker']
   s.email       = 'me@lesaker.org'
   s.homepage    = 'https://github.com/akerl/targit'

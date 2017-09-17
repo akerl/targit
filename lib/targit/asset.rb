@@ -8,7 +8,7 @@ module Targit
   class Asset
     include Targit::Client
 
-    attr_reader :release, :asset, :name, :github_data
+    attr_reader :release, :asset, :name
 
     def initialize(asset, repo, tag, params = {})
       @options = params

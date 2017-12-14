@@ -43,3 +43,4 @@ Mercenary.program(:targit) do |p|
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

@@ -1,5 +1,5 @@
 require 'English'
-$LOAD_PATH.unshift File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift File.expand_path('lib', __dir__)
 require 'targit/version'
 
 Gem::Specification.new do |s|

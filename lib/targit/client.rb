@@ -33,7 +33,7 @@ module Targit
 
     def authfiles
       return [:default] unless @options[:authfile]
-      @authfile ||= @options[:authfile].split(',')
+      @authfiles ||= @options[:authfile].split(',')
     end
   end
 end

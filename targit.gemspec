@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 3.0'
-  s.add_dependency 'octoauth', '~> 1.5.4'
+  s.add_dependency 'octoauth', '~> 1.5.5'
   s.add_dependency 'octokit', '~> 4.13.0'
 
   s.add_development_dependency 'codecov', '~> 0.1.1'

@@ -9,9 +9,7 @@ end
 
 require 'rspec'
 require 'targit'
-require 'webmock'
-
-WebMock.enable!
+require 'webmock/rspec'
 
 unless File.exist? 'spec/.creds'
   File.open('spec/.creds', 'w') do |fh|
@@ -21,6 +19,7 @@ end
 
 require 'vcr'
 VCR.configure do |c|
+  c.configure_rspec_metadata!
   c.cassette_library_dir = 'spec/fixtures/cassettes'
   c.hook_into :webmock
   c.before_record do |i|

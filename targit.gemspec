@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'mercenary', '~> 0.3.4'
   s.add_dependency 'mime-types', '~> 3.0'
-  s.add_dependency 'octoauth', '~> 1.5.5'
-  s.add_dependency 'octokit', '~> 4.14.0'
+  s.add_dependency 'octoauth', '~> 1.6.0'
+  s.add_dependency 'octokit', '~> 4.15.0'
 
   s.add_development_dependency 'codecov', '~> 0.1.1'
   s.add_development_dependency 'fuubar', '~> 2.5.0'
@@ -30,5 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.9.0'
   s.add_development_dependency 'rubocop', '~> 0.76.0'
   s.add_development_dependency 'vcr', '~> 5.0.0'
-  s.add_development_dependency 'webmock', '~> 3.7.6'
+  s.add_development_dependency 'webmock', '~> 3.8.0'
 end

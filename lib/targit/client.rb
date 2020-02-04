@@ -13,12 +13,12 @@ module Targit
 
     def _client
       auth = Octoauth.new octoauth_options
-      Octokit::Client.new(
+      Octokit::Client.new({
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],
         web_endpoint: @options[:api_endpoint],
         auto_paginate: true
-      )
+      }.compact)
     end
 
     def octoauth_options

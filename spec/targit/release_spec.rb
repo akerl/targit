@@ -42,7 +42,8 @@ describe Targit do
         release = Targit::Release.new(
           'akerl/targit',
           'new_release',
-          create: 'special',
+          create: true,
+          release_name: 'special',
           authfile: 'spec/.creds'
         )
         expect(release.data[:name]).to eql 'special'

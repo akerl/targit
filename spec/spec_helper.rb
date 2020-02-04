@@ -1,15 +1,7 @@
-if ENV['CI'] == 'true'
-  require 'simplecov'
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
-  SimpleCov.start do
-    add_filter '/spec/'
-  end
-end
-
 require 'rspec'
 require 'targit'
 require 'webmock/rspec'
+require 'vcr'
 
 unless File.exist? 'spec/.creds'
   File.open('spec/.creds', 'w') do |fh|
@@ -17,7 +9,6 @@ unless File.exist? 'spec/.creds'
   end
 end
 
-require 'vcr'
 VCR.configure do |c|
   c.configure_rspec_metadata!
   c.cassette_library_dir = 'spec/fixtures/cassettes'

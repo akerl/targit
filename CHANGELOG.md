@@ -1,3 +1,9 @@
+# 2.3.0 / 2020-02-03
+
+* [BUGFIX] Account for octokit api_endpoint bug
+* [ENHANCEMENT] Update dependencies
+* [BUGFIX] Regenerate test fixtures
+
 # 2.2.0 / 2017-05-12
 
 * [FEATURE] Support --endpoint in the CLI

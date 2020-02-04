@@ -10,7 +10,9 @@ http_interactions:
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 3.2.0
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -21,7 +23,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sat, 12 Jul 2014 22:37:18 GMT
+      - Tue, 04 Feb 2020 07:23:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,401 +33,406 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4380'
+      - '4932'
       X-Ratelimit-Reset:
-      - '1405206221'
+      - '1580804477'
       Cache-Control:
       - private, max-age=60, s-maxage=60
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
       X-Github-Media-Type:
       - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
       Access-Control-Allow-Origin:
       - "*"
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-    body:
-      encoding: UTF-8
-      string: '[{"url":"https://api.github.com/repos/akerl/targit/releases/426210","assets_url":"https://api.github.com/repos/akerl/targit/releases/426210/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426210/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/meta_testing","id":426210,"tag_name":"meta_testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:16Z","assets":[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/182359","id":182359,"name":"beta","label":null,"uploader":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2014-07-12T22:37:17Z","updated_at":"2014-07-12T22:37:17Z","browser_download_url":"https://github.com/akerl/targit/releases/download/meta_testing/beta"}],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/meta_testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/meta_testing","body":null},{"url":"https://api.github.com/repos/akerl/targit/releases/426209","assets_url":"https://api.github.com/repos/akerl/targit/releases/426209/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426209/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/more_testing","id":426209,"tag_name":"more_testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:07Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/more_testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/more_testing","body":null},{"url":"https://api.github.com/repos/akerl/targit/releases/426208","assets_url":"https://api.github.com/repos/akerl/targit/releases/426208/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426208/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":426208,"tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:06Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}]'
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 3.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Sat, 12 Jul 2014 22:37:18 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4379'
-      X-Ratelimit-Reset:
-      - '1405206221'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Last-Modified:
-      - Sat, 12 Jul 2014 22:37:06 GMT
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
+      - max-age=31536000; includeSubdomains; preload
       X-Frame-Options:
       - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
       X-Content-Type-Options:
       - nosniff
-    body:
-      encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/426208","assets_url":"https://api.github.com/repos/akerl/targit/releases/426208/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426208/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":426208,"tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:06Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208/assets?per_page=100
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 3.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Sat, 12 Jul 2014 22:37:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4378'
-      X-Ratelimit-Reset:
-      - '1405206221'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      Link:
-      - <https://api.github.com/repositories/21316764/releases/426208/assets?per_page=100&page=0>;
-        rel="last"
       X-Xss-Protection:
       - 1; mode=block
-      X-Frame-Options:
-      - deny
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
-      Content-Length:
-      - '2'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-    body:
-      encoding: UTF-8
-      string: "[]"
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 3.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Sat, 12 Jul 2014 22:37:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4377'
-      X-Ratelimit-Reset:
-      - '1405206221'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Last-Modified:
-      - Sat, 12 Jul 2014 22:37:06 GMT
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-    body:
-      encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/426208","assets_url":"https://api.github.com/repos/akerl/targit/releases/426208/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426208/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":426208,"tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:06Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208/assets?per_page=100
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 3.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Sat, 12 Jul 2014 22:37:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4376'
-      X-Ratelimit-Reset:
-      - '1405206221'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      Link:
-      - <https://api.github.com/repositories/21316764/releases/426208/assets?per_page=100&page=0>;
-        rel="last"
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Content-Length:
-      - '2'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-    body:
-      encoding: UTF-8
-      string: "[]"
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 3.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Sat, 12 Jul 2014 22:37:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4375'
-      X-Ratelimit-Reset:
-      - '1405206221'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Last-Modified:
-      - Sat, 12 Jul 2014 22:37:06 GMT
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
-      X-Content-Type-Options:
-      - nosniff
-    body:
-      encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/426208","assets_url":"https://api.github.com/repos/akerl/targit/releases/426208/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426208/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":426208,"tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:06Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
-    http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:17 GMT
-- request:
-    method: post
-    uri: https://uploads.github.com/repos/akerl/targit/releases/426208/assets?name=beta
     body:
       encoding: ASCII-8BIT
-      string: |
-        hello world
+      string: '[{"url":"https://api.github.com/repos/akerl/targit/releases/23363538","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363538/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363538/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/meta_testing","id":23363538,"node_id":"MDc6UmVsZWFzZTIzMzYzNTM4","tag_name":"meta_testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:23:41Z","assets":[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/17779578","id":17779578,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3Nzc5NTc4","name":"beta","label":"","uploader":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2020-02-04T07:23:42Z","updated_at":"2020-02-04T07:23:42Z","browser_download_url":"https://github.com/akerl/targit/releases/download/meta_testing/beta"}],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/meta_testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/meta_testing","body":null},{"url":"https://api.github.com/repos/akerl/targit/releases/23363537","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363537/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363537/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/more_testing","id":23363537,"node_id":"MDc6UmVsZWFzZTIzMzYzNTM3","tag_name":"more_testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:23:35Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/more_testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/more_testing","body":null},{"url":"https://api.github.com/repos/akerl/targit/releases/23363520","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363520/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363520/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":23363520,"node_id":"MDc6UmVsZWFzZTIzMzYzNTIw","tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:22:02Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null},{"url":"https://api.github.com/repos/akerl/targit/releases/1980148","assets_url":"https://api.github.com/repos/akerl/targit/releases/1980148/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/1980148/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/1.1.0","id":1980148,"node_id":"MDc6UmVsZWFzZTE5ODAxNDg=","tag_name":"1.1.0","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2015-10-14T02:33:04Z","published_at":"2015-10-19T05:15:22Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/1.1.0","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/1.1.0","body":null}]'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520
+    body:
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 3.2.0
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 04 Feb 2020 07:23:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4931'
+      X-Ratelimit-Reset:
+      - '1580804476'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Last-Modified:
+      - Tue, 04 Feb 2020 07:22:02 GMT
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/23363520","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363520/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363520/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":23363520,"node_id":"MDc6UmVsZWFzZTIzMzYzNTIw","tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:22:02Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520/assets?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 04 Feb 2020 07:23:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4930'
+      X-Ratelimit-Reset:
+      - '1580804476'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 04 Feb 2020 07:23:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4929'
+      X-Ratelimit-Reset:
+      - '1580804476'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Last-Modified:
+      - Tue, 04 Feb 2020 07:22:02 GMT
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/23363520","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363520/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363520/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":23363520,"node_id":"MDc6UmVsZWFzZTIzMzYzNTIw","tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:22:02Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520/assets?per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 04 Feb 2020 07:23:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4928'
+      X-Ratelimit-Reset:
+      - '1580804476'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 04 Feb 2020 07:23:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4927'
+      X-Ratelimit-Reset:
+      - '1580804477'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Last-Modified:
+      - Tue, 04 Feb 2020 07:22:02 GMT
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/23363520","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363520/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363520/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":23363520,"node_id":"MDc6UmVsZWFzZTIzMzYzNTIw","tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:22:02Z","assets":[],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2020 07:23:44 GMT
+- request:
+    method: post
+    uri: https://uploads.github.com/repos/akerl/targit/releases/23363520/assets?name=beta
+    body:
+      encoding: ASCII-8BIT
+      string: 'hello world
+
+'
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.15.0
       Content-Type:
       - application/octet-stream
       Accept-Encoding:
@@ -442,11 +449,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Last-Modified:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       Strict-Transport-Security:
-      - max-age=2592000
+      - max-age=31557600
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Accepted-Oauth-Scopes:
+      - repo
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -454,21 +463,21 @@ http_interactions:
       X-Github-Media-Type:
       - github.v3; format=json
       X-Oauth-Scopes:
-      - public_repo
+      - read:org, read:user, repo
       X-Xss-Protection:
       - 1; mode=block
       Date:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/assets/182360","id":182360,"name":"beta","label":null,"uploader":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2014-07-12T22:37:19Z","updated_at":"2014-07-12T22:37:20Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}'
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/assets/17779580","id":17779580,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3Nzc5NTgw","name":"beta","label":"","uploader":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2020-02-04T07:23:44Z","updated_at":"2020-02-04T07:23:44Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}'
     http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:18 GMT
+  recorded_at: Tue, 04 Feb 2020 07:23:44 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/assets/182360
+    uri: https://api.github.com/repos/akerl/targit/releases/assets/17779580
     body:
       encoding: US-ASCII
       string: ''
@@ -476,7 +485,9 @@ http_interactions:
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 3.2.0
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -487,7 +498,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -497,47 +508,47 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4370'
+      - '4924'
       X-Ratelimit-Reset:
-      - '1405206221'
+      - '1580804477'
       Cache-Control:
       - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
       Last-Modified:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       X-Oauth-Scopes:
-      - public_repo
+      - read:org, read:user, repo
       X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
+      - repo
       X-Github-Media-Type:
       - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
       Access-Control-Allow-Origin:
       - "*"
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
       X-Content-Type-Options:
       - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
     body:
-      encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/assets/182360","id":182360,"name":"beta","label":null,"uploader":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2014-07-12T22:37:19Z","updated_at":"2014-07-12T22:37:20Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}'
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/assets/17779580","id":17779580,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3Nzc5NTgw","name":"beta","label":"","uploader":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2020-02-04T07:23:44Z","updated_at":"2020-02-04T07:23:44Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}'
     http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:18 GMT
+  recorded_at: Tue, 04 Feb 2020 07:23:44 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520
     body:
       encoding: US-ASCII
       string: ''
@@ -545,7 +556,9 @@ http_interactions:
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 3.2.0
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -556,7 +569,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -566,47 +579,47 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4369'
+      - '4923'
       X-Ratelimit-Reset:
-      - '1405206221'
+      - '1580804476'
       Cache-Control:
       - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
       Last-Modified:
-      - Sat, 12 Jul 2014 22:37:06 GMT
+      - Tue, 04 Feb 2020 07:22:02 GMT
       X-Oauth-Scopes:
-      - public_repo
+      - read:org, read:user, repo
       X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
+      - repo
       X-Github-Media-Type:
       - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
       Access-Control-Allow-Origin:
       - "*"
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
       X-Content-Type-Options:
       - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
     body:
-      encoding: UTF-8
-      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/426208","assets_url":"https://api.github.com/repos/akerl/targit/releases/426208/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/426208/assets{?name}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":426208,"tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-07-12T20:38:20Z","published_at":"2014-07-12T22:37:06Z","assets":[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/182360","id":182360,"name":"beta","label":null,"uploader":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2014-07-12T22:37:19Z","updated_at":"2014-07-12T22:37:20Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/akerl/targit/releases/23363520","assets_url":"https://api.github.com/repos/akerl/targit/releases/23363520/assets","upload_url":"https://uploads.github.com/repos/akerl/targit/releases/23363520/assets{?name,label}","html_url":"https://github.com/akerl/targit/releases/tag/testing","id":23363520,"node_id":"MDc6UmVsZWFzZTIzMzYzNTIw","tag_name":"testing","target_commitish":"master","name":null,"draft":false,"author":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-10-31T18:56:45Z","published_at":"2020-02-04T07:22:02Z","assets":[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/17779580","id":17779580,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3Nzc5NTgw","name":"beta","label":"","uploader":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2020-02-04T07:23:44Z","updated_at":"2020-02-04T07:23:44Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}],"tarball_url":"https://api.github.com/repos/akerl/targit/tarball/testing","zipball_url":"https://api.github.com/repos/akerl/targit/zipball/testing","body":null}'
     http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:18 GMT
+  recorded_at: Tue, 04 Feb 2020 07:23:44 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/akerl/targit/releases/426208/assets?per_page=100
+    uri: https://api.github.com/repos/akerl/targit/releases/23363520/assets?per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -614,7 +627,9 @@ http_interactions:
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 3.2.0
+      - Octokit Ruby Gem 4.15.0
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -625,7 +640,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sat, 12 Jul 2014 22:37:20 GMT
+      - Tue, 04 Feb 2020 07:23:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -635,40 +650,40 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4368'
+      - '4922'
       X-Ratelimit-Reset:
-      - '1405206221'
+      - '1580804476'
       Cache-Control:
       - private, max-age=60, s-maxage=60
-      X-Oauth-Scopes:
-      - public_repo
-      X-Accepted-Oauth-Scopes:
-      - ''
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
+      X-Oauth-Scopes:
+      - read:org, read:user, repo
+      X-Accepted-Oauth-Scopes:
+      - repo
       X-Github-Media-Type:
       - github.v3; format=json
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - deny
-      Content-Security-Policy:
-      - default-src 'none'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
       Access-Control-Allow-Origin:
       - "*"
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
       X-Content-Type-Options:
       - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
     body:
-      encoding: UTF-8
-      string: '[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/182360","id":182360,"name":"beta","label":null,"uploader":{"login":"akerl","id":491209,"avatar_url":"https://avatars.githubusercontent.com/u/491209?","gravatar_id":"819691dc5c197c042ccd16b894545673","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2014-07-12T22:37:19Z","updated_at":"2014-07-12T22:37:20Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}]'
+      encoding: ASCII-8BIT
+      string: '[{"url":"https://api.github.com/repos/akerl/targit/releases/assets/17779580","id":17779580,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3Nzc5NTgw","name":"beta","label":"","uploader":{"login":"akerl","id":491209,"node_id":"MDQ6VXNlcjQ5MTIwOQ==","avatar_url":"https://avatars0.githubusercontent.com/u/491209?v=4","gravatar_id":"","url":"https://api.github.com/users/akerl","html_url":"https://github.com/akerl","followers_url":"https://api.github.com/users/akerl/followers","following_url":"https://api.github.com/users/akerl/following{/other_user}","gists_url":"https://api.github.com/users/akerl/gists{/gist_id}","starred_url":"https://api.github.com/users/akerl/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/akerl/subscriptions","organizations_url":"https://api.github.com/users/akerl/orgs","repos_url":"https://api.github.com/users/akerl/repos","events_url":"https://api.github.com/users/akerl/events{/privacy}","received_events_url":"https://api.github.com/users/akerl/received_events","type":"User","site_admin":false},"content_type":"application/octet-stream","state":"uploaded","size":12,"download_count":0,"created_at":"2020-02-04T07:23:44Z","updated_at":"2020-02-04T07:23:44Z","browser_download_url":"https://github.com/akerl/targit/releases/download/testing/beta"}]'
     http_version: 
-  recorded_at: Sat, 12 Jul 2014 22:37:19 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Tue, 04 Feb 2020 07:23:44 GMT
+recorded_with: VCR 5.0.0

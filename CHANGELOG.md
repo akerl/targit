@@ -1,3 +1,7 @@
+# 2.4.0 / 2022-03-23
+
+* [BUGFIX] Update Octoauth dependency
+
 # 2.3.0 / 2020-02-03
 
 * [BUGFIX] Account for octokit api_endpoint bug

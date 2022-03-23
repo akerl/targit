@@ -5,7 +5,6 @@ require 'targit/version'
 Gem::Specification.new do |s|
   s.name        = 'targit'
   s.version     = Targit::VERSION
-  s.date        = Time.now.strftime('%Y-%m-%d')
 
   s.summary     = 'Tool for adding GitHub release assets'
   s.description = 'Manages GitHub release assets for pushing binaries and other large files' # rubocop:disable Metrics/LineLength
@@ -18,17 +17,14 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
   s.executables = ['targit']
 
-  s.add_dependency 'mercenary', '~> 0.3.4'
-  s.add_dependency 'mime-types', '~> 3.0'
-  s.add_dependency 'octoauth', '~> 1.6.0'
-  s.add_dependency 'octokit', '~> 4.15.0'
+  s.add_dependency 'mercenary', '~> 0.4.0'
+  s.add_dependency 'mime-types', '~> 3.4.1'
+  s.add_dependency 'octoauth', '~> 1.9.0'
+  s.add_dependency 'octokit', '~> 4.22.0'
 
-  s.add_development_dependency 'codecov', '~> 0.1.1'
-  s.add_development_dependency 'fuubar', '~> 2.5.0'
-  s.add_development_dependency 'goodcop', '~> 0.8.0'
-  s.add_development_dependency 'rake', '~> 13.0.0'
-  s.add_development_dependency 'rspec', '~> 3.9.0'
-  s.add_development_dependency 'rubocop', '~> 0.76.0'
   s.add_development_dependency 'vcr', '~> 5.0.0'
   s.add_development_dependency 'webmock', '~> 3.8.0'
+  s.add_development_dependency 'goodcop', '~> 0.9.5'
+
+  s.metadata['rubygems_mfa_required'] = 'true'
 end

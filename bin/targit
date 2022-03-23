@@ -15,7 +15,6 @@ Mercenary.program(:targit) do |p|
   p.description 'Tool for adding GitHub release assets'
   p.syntax 'targit [options] USER/REPO TAG /path/to/file'
 
-  # rubocop:disable Metrics/LineLength
   p.option :force, '-f', '--force', 'Replace the asset if it already exists'
   p.option :create, '-c', '--create', 'Create release if it does not exist'
   p.option :release_name, '-r NAME', '--release NAME', 'Set the release name'
@@ -23,7 +22,6 @@ Mercenary.program(:targit) do |p|
   p.option :authfile, '-a FILE', '--authfile FILE', 'Set the auth files for GitHub credentials (comma-delimited)'
   p.option :name, '-n NAME', '--name NAME', 'Set the name for the release asset'
   p.option :api_endpoint, '--endpoint URL', 'Use a custom URL for the GitHub API'
-  # rubocop:enable Metrics/LineLength
 
   p.action do |_, options|
     repo, tag = ARGV.shift 2
@@ -31,14 +29,14 @@ Mercenary.program(:targit) do |p|
       puts p
     elsif !ARGV.empty?
       ARGV.each { |file| raise("#{file} not found") unless File.exist? file }
-      ARGV.each do |file|
+      ARGV.each do |file| # rubocop:disable Style/CombinableLoops
         puts "Adding #{file} on #{tag} of #{repo}"
         upload file, repo, tag, options
       end
-    elsif !STDIN.tty?
+    elsif !$stdin.tty?
       raise('Name required if file is passed via STDIN') unless options[:name]
-      upload STDIN, repo, tag, options
-    else
+      upload $stdin, repo, tag, options
+    else # rubocop:disable Lint/DuplicateBranch
       puts p
     end
   end

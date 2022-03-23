@@ -6,8 +6,10 @@ Gem::Specification.new do |s|
   s.name        = 'targit'
   s.version     = Targit::VERSION
 
+  s.required_ruby_version = '>= 3.0'
+
   s.summary     = 'Tool for adding GitHub release assets'
-  s.description = 'Manages GitHub release assets for pushing binaries and other large files' # rubocop:disable Metrics/LineLength
+  s.description = 'Manages GitHub release assets for pushing binaries and other large files'
   s.authors     = ['Les Aker']
   s.email       = 'me@lesaker.org'
   s.homepage    = 'https://github.com/akerl/targit'
@@ -22,9 +24,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'octoauth', '~> 1.9.0'
   s.add_dependency 'octokit', '~> 4.22.0'
 
+  s.add_development_dependency 'goodcop', '~> 0.9.5'
   s.add_development_dependency 'vcr', '~> 5.0.0'
   s.add_development_dependency 'webmock', '~> 3.8.0'
-  s.add_development_dependency 'goodcop', '~> 0.9.5'
 
   s.metadata['rubygems_mfa_required'] = 'true'
 end

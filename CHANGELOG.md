@@ -1,3 +1,7 @@
+# 2.4.1 / 2022-03-29
+
+* [BUGFIX] Handle timing mismatch for newly created releases
+
 # 2.4.0 / 2022-03-23
 
 * [BUGFIX] Update Octoauth dependency

@@ -3,5 +3,5 @@
 ##
 # Set the version (needed for Mercenary -v)
 module Targit
-  VERSION = '2.4.0'
+  VERSION = '2.4.1'
 end

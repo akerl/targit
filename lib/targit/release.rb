@@ -11,7 +11,7 @@ module Targit
       @tag = tag
       @options = params
       @options[:client] ||= client
-      create if @options.include?(:create) && data.nil?
+      @data = create if @options.include?(:create) && data.nil?
       raise('No release found') if data.nil?
     end
 

@@ -1,6 +1,8 @@
 require 'octokit'
 require 'octoauth'
 
+Faraday.default_adapter = :httpclient
+
 module Targit
   ##
   # Helper module to load a GitHub API client object

@@ -1,3 +1,7 @@
+# 2.4.2 / 2022-05-01
+
+* [BUGFIX] Update default faraday connection to resolve large file error
+
 # 2.4.1 / 2022-03-29
 
 * [BUGFIX] Handle timing mismatch for newly created releases

@@ -1,5 +1,9 @@
 # 2.4.2 / 2022-05-01
 
+* [BUGFIX] Try harder to use better faraday client
+
+# 2.4.2 / 2022-05-01
+
 * [BUGFIX] Update default faraday connection to resolve large file error
 
 # 2.4.1 / 2022-03-29

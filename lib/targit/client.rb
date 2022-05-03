@@ -1,8 +1,6 @@
 require 'octokit'
 require 'octoauth'
 
-Faraday.default_adapter = :httpclient
-
 module Targit
   ##
   # Helper module to load a GitHub API client object
@@ -19,8 +17,19 @@ module Targit
         access_token: auth.token,
         api_endpoint: @options[:api_endpoint],
         web_endpoint: @options[:api_endpoint],
-        auto_paginate: true
+        auto_paginate: true,
+        middleware: middleware
       }.compact)
+    end
+
+    def middleware
+      stack ||= Faraday::RackBuilder.new do |builder|
+        builder.use Octokit::Response::RaiseError
+        builder.response :logger do |logger|
+          logger.filter(/(Authorization: "(token|Bearer) )(\w+)/, '\1[REMOVED]')
+        end
+        builder.adapter :httpclient
+      end
     end
 
     def octoauth_options

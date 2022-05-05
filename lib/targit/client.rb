@@ -23,7 +23,7 @@ module Targit
     end
 
     def middleware
-      stack ||= Faraday::RackBuilder.new do |builder|
+      @middleware ||= Faraday::RackBuilder.new do |builder|
         builder.use Octokit::Response::RaiseError
         builder.adapter :httpclient
       end

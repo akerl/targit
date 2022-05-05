@@ -1,3 +1,7 @@
+# 2.4.5/ 2022-05-04
+
+* [BUGFIX] Switch to smarter http adapter
+
 # 2.4.4 / 2022-05-04
 
 * [BUGFIX] Reduce log spam

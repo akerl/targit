@@ -25,9 +25,6 @@ module Targit
     def middleware
       stack ||= Faraday::RackBuilder.new do |builder|
         builder.use Octokit::Response::RaiseError
-        builder.response :logger do |logger|
-          logger.filter(/(Authorization: "(token|Bearer) )(\w+)/, '\1[REMOVED]')
-        end
         builder.adapter :httpclient
       end
     end

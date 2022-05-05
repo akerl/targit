@@ -1,3 +1,7 @@
+# 2.4.4 / 2022-05-04
+
+* [BUGFIX] Reduce log spam
+
 # 2.4.2 / 2022-05-01
 
 * [BUGFIX] Try harder to use better faraday client

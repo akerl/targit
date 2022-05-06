@@ -1,6 +1,5 @@
 require 'octokit'
 require 'octoauth'
-require 'faraday/http'
 
 module Targit
   ##
@@ -27,7 +26,6 @@ module Targit
       @middleware ||= Faraday::RackBuilder.new do |builder|
         builder.use Octokit::Response::RaiseError
         builder.request :multipart
-        builder.adapter :http
       end
     end
 

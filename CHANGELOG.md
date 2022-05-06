@@ -1,8 +1,12 @@
-# 2.4.7/ 2022-05-05
+# 2.4.8 / 2022-05-05
+
+* [BUGFIX] Undo dumb http lib changes
+
+# 2.4.7 / 2022-05-05
 
 * [BUGFIX] Switch to even smarter http library
 
-# 2.4.6/ 2022-05-05
+# 2.4.6 / 2022-05-05
 
 * [BUGFIX] Switch to even smarter http library
 

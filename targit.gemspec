@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
   s.executables = ['targit']
 
-  s.add_dependency 'faraday-http', '~> 1.1.0'
   s.add_dependency 'mercenary', '~> 0.4.0'
   s.add_dependency 'mime-types', '~> 3.4.1'
   s.add_dependency 'octoauth', '~> 1.9.0'

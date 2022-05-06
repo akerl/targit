@@ -1,3 +1,7 @@
+# 2.4.7/ 2022-05-05
+
+* [BUGFIX] Switch to even smarter http library
+
 # 2.4.6/ 2022-05-05
 
 * [BUGFIX] Switch to even smarter http library

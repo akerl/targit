@@ -26,7 +26,7 @@ module Targit
       @middleware ||= Faraday::RackBuilder.new do |builder|
         builder.use Octokit::Response::RaiseError
         builder.request :multipart
-        builder.adapter :net_http
+        builder.adapter :http
       end
     end
 

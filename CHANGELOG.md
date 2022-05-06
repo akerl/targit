@@ -1,3 +1,7 @@
+# 2.4.6/ 2022-05-05
+
+* [BUGFIX] Switch to even smarter http library
+
 # 2.4.5/ 2022-05-04
 
 * [BUGFIX] Switch to smarter http adapter

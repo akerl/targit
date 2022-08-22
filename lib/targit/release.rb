@@ -22,9 +22,7 @@ module Targit
     private
 
     def _data
-      a = client.releases(@repo)
-      p a
-      a.find { |x| x[:tag_name] == @tag }
+      client.releases(@repo).find { |x| x[:tag_name] == @tag }
     end
 
     def create

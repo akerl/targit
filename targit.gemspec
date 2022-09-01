@@ -16,7 +16,6 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files       = `git ls-files`.split
-  s.test_files  = `git ls-files spec/*`.split
   s.executables = ['targit']
 
   s.add_dependency 'mercenary', '~> 0.4.0'
@@ -24,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'octoauth', '~> 1.9.0'
   s.add_dependency 'octokit', '~> 4.22.0'
 
-  s.add_development_dependency 'goodcop', '~> 0.9.5'
+  s.add_development_dependency 'goodcop', '~> 0.9.7'
   s.add_development_dependency 'vcr', '~> 5.0.0'
   s.add_development_dependency 'webmock', '~> 3.8.0'
 

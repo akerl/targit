@@ -19,11 +19,17 @@ module Targit
       @name = @options[:name] || File.basename(@asset)
     end
 
-    def upload!
+    def upload!(retries = 2) # rubocop:disable Metrics/AbcSize
       delete! if @options[:force]
       raise('Release asset already exists') if already_exists?
       asset = client.upload_asset @release.data[:url], @asset, @upload_options
+      sleep 1
       client.release_asset asset[:url]
+    rescue Errno::ECONNRESET
+      raise if retries.zero?
+      puts "Retrying upload for #{@asset}"
+      sleep 5
+      upload!(retries - 1)
     end
 
     def already_exists?

@@ -2,7 +2,7 @@ targit
 =========
 
 [![Gem Version](https://img.shields.io/gem/v/targit.svg)](https://rubygems.org/gems/targit)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/akerl/targit/Build)](https://github.com/akerl/targit/actions)
+[![GitHub Workflow Status](https://img.shields.io/actions/github/workflow/status/akerl/targit/build.yml?branch=main)](https://github.com/akerl/targit/actions)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Manages GitHub release assets for pushing binaries and other large files

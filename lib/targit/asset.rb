@@ -25,7 +25,7 @@ module Targit
       asset = client.upload_asset @release.data[:url], @asset, @upload_options
       sleep 1
       client.release_asset asset[:url]
-    rescue Faraday::ConnectionFailed
+    rescue Faraday::ConnectionFailed, Faraday::TimeoutError
       raise if retries.zero?
       puts "Retrying upload for #{@asset}"
       sleep 5

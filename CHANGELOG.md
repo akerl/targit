@@ -1,3 +1,7 @@
+# 2.5.2 / 2022-12-22
+
+* [ENHANCEMENT] Improve retry logic for GitHub timeouts
+
 # 2.4.8 / 2022-05-05
 
 * [BUGFIX] Undo dumb http lib changes

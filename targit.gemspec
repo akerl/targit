@@ -21,10 +21,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday-multipart', '~> 1.1.1'
   s.add_dependency 'mercenary', '~> 0.4.0'
   s.add_dependency 'mime-types', '~> 3.7.0'
-  s.add_dependency 'octoauth', '~> 2.0.1'
+  s.add_dependency 'octoauth', '~> 2.0.3'
   s.add_dependency 'octokit', '~> 10.0.0'
 
-  s.add_development_dependency 'goodcop', '~> 0.9.7'
+  s.add_development_dependency 'goodcop', '~> 0.9.9'
   s.add_development_dependency 'vcr', '~> 6.3.1'
   s.add_development_dependency 'webmock', '~> 3.25.1'
 

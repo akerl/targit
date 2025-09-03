@@ -1,5 +1,6 @@
 require 'octokit'
 require 'octoauth'
+require 'faraday/multipart'
 
 module Targit
   ##

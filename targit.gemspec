@@ -18,14 +18,15 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split
   s.executables = ['targit']
 
+  s.add_dependency 'faraday-multipart', '~> 1.1.1'
   s.add_dependency 'mercenary', '~> 0.4.0'
-  s.add_dependency 'mime-types', '~> 3.4.1'
-  s.add_dependency 'octoauth', '~> 1.9.0'
-  s.add_dependency 'octokit', '~> 4.22.0'
+  s.add_dependency 'mime-types', '~> 3.7.0'
+  s.add_dependency 'octoauth', '~> 2.0.1'
+  s.add_dependency 'octokit', '~> 10.0.0'
 
   s.add_development_dependency 'goodcop', '~> 0.9.7'
-  s.add_development_dependency 'vcr', '~> 5.0.0'
-  s.add_development_dependency 'webmock', '~> 3.8.0'
+  s.add_development_dependency 'vcr', '~> 6.3.1'
+  s.add_development_dependency 'webmock', '~> 3.25.1'
 
   s.metadata['rubygems_mfa_required'] = 'true'
 end
